@@ -9,7 +9,7 @@ import { CardUserComponent } from './card-user/card-user.component';
 import { HomeComponent } from './home/home.component';
 
 import { RouterModule, Routes } from '@angular/router';
-const appRoutes: Routes = [{ path: '', component: HomeComponent }, { path: ':user', component: CardUserComponent }];
+const appRoutes: Routes = [{ path: '', component: HomeComponent }, { path: ':username', component: CardUserComponent }];
 @NgModule({
   declarations: [AppComponent, HomeComponent, CardUserComponent],
   imports: [
