@@ -9,9 +9,30 @@ import { CardUserComponent } from './card-user/card-user.component';
 import { HomeComponent } from './home/home.component';
 
 import { RouterModule, Routes } from '@angular/router';
-const appRoutes: Routes = [{ path: '', component: HomeComponent }, { path: ':username', component: CardUserComponent }];
+import { HeaderComponent } from './header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { UsersComponent } from './users/users.component';
+import { PostsComponent } from './posts/posts.component';
+import { CardPostComponent } from './card-post/card-post.component';
+import { MatCardModule } from '@angular/material/card';
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'users/:id', component: CardUserComponent },
+  { path: 'posts', component: PostsComponent },
+  { path: 'posts/:id', component: CardPostComponent }
+];
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CardUserComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    CardUserComponent,
+    PostsComponent,
+    HeaderComponent,
+    UsersComponent,
+    CardPostComponent
+  ],
   imports: [
     BrowserModule,
     RouterModule,
@@ -19,7 +40,9 @@ const appRoutes: Routes = [{ path: '', component: HomeComponent }, { path: ':use
     MatListModule,
     HttpClientModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
 

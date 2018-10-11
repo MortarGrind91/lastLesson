@@ -7,9 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class GithubService {
   constructor(private http: HttpClient) {}
 
-  configUrl = 'https://api.github.com/users?since=255';
-
   getConfig() {
-    return this.http.get(this.configUrl);
+    return this.http.get('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getPosts() {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
 }

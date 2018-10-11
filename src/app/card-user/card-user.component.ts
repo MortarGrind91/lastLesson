@@ -10,8 +10,6 @@ export class CardUserComponent implements OnInit {
   constructor(private route: ActivatedRoute, private cardUserService: CardUserService) {}
   user: any;
   ngOnInit() {
-    this.route.params.subscribe(({ username }) =>
-      this.cardUserService.getUser(username).subscribe(user => (this.user = user))
-    );
+    this.route.params.subscribe(({ id }) => this.cardUserService.getUser(id).subscribe(user => (this.user = user)));
   }
 }

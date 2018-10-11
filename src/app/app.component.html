@@ -1,11 +1,3 @@
-<div class="container">
-  <div>
-    <mat-nav-list role="list" *ngFor="let a of users">
-      <a mat-list-item routerLink="{{a.login}}">
-        {{a.login}}
-        <img matListAvatar src="{{a.avatar_url}}" alt="...">
-      </a>
-    </mat-nav-list>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+<app-header></app-header>
+
+<router-outlet></router-outlet>
