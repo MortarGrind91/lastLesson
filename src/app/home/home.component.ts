@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // this.githubService.getRepos().subscribe(data => (this.));
-    )
+    
   }
 
 }

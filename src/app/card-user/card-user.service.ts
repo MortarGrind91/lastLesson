@@ -7,9 +7,9 @@ export class CardUserService {
   constructor(private http: HttpClient) {}
 
   getUser(id) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return this.http.get(`http://localhost:3000/users/${id}`);
   }
   getPost(id) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    return this.http.get(`http://localhost:3000/posts/${id}`);
   }
 }

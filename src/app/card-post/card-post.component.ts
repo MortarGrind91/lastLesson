@@ -10,12 +10,12 @@ import { Post } from './post';
 export class CardPostComponent implements OnInit {
   constructor(private route: ActivatedRoute, private cardUserService: CardUserService) {}
   post: Post;
-  username: string;
+  name: string;
   ngOnInit() {
     this.route.params.subscribe(({ id }) =>
       this.cardUserService.getPost(id).subscribe((post: Post) => {
         this.post = post;
-        this.cardUserService.getUser(post.userId).subscribe((user: any) => (this.username = user.name));
+        this.cardUserService.getUser(post.authorId).subscribe((user: any) => (this.name = user.name));
       })
     );
   }

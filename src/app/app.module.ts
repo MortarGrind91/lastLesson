@@ -15,12 +15,17 @@ import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
 import { CardPostComponent } from './card-post/card-post.component';
 import { MatCardModule } from '@angular/material/card';
+import { CommentComponent } from './comment/comment.component';
+import { CommentsComponent } from './comments/comments.component';
+import { MatInputModule } from '@angular/material/input';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'users', component: UsersComponent },
   { path: 'users/:id', component: CardUserComponent },
   { path: 'posts', component: PostsComponent },
-  { path: 'posts/:id', component: CardPostComponent }
+  { path: 'posts/:id', component: CardPostComponent },
+  { path: 'comments', component: CommentsComponent },
+  { path: 'comments/:id', component: CommentComponent }
 ];
 
 @NgModule({
@@ -31,7 +36,9 @@ const appRoutes: Routes = [
     PostsComponent,
     HeaderComponent,
     UsersComponent,
-    CardPostComponent
+    CardPostComponent,
+    CommentComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
 

@@ -1,5 +1,14 @@
+<mat-card>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="New user" (keyup)="onKey($event)">
+  </mat-form-field>
+  <button (click)="onSend()" mat-button color="primary">Add user</button>
+  <button (click)="onSearch()" mat-button color="primary">Search</button>
+</mat-card>
+
 <mat-nav-list role="list" *ngFor="let user of users">
   <a mat-list-item routerLink="/users/{{user.id}}">
-    {{user.username}}
+    <span matLine> {{user.name}} </span>
   </a>
+  <button (click)="onRemove(user.id)" mat-button color="primary">DELETE</button>
 </mat-nav-list>

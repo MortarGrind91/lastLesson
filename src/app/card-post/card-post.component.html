@@ -6,12 +6,12 @@
 
   <mat-card-content>
     <mat-card-subtitle>
-      <p>{{post.body}}</p>
+      <p>{{post.description}}</p>
     </mat-card-subtitle>
   </mat-card-content>
 
   <mat-card-actions>
-    Author: <a mat-button routerLink="/users/{{post.userId}}">{{username}}</a>
+    Author: <a mat-button routerLink="/users/{{post.authorId}}">{{name}}</a>
   </mat-card-actions>
 
 </mat-card>

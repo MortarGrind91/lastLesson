@@ -1,0 +1,5 @@
+<mat-nav-list *ngFor="let comment of comments">
+  <a mat-list-item routerLink="/comments/{{comment.id}}">
+    <p matLine>{{comment.msg}}</p>
+  </a>
+</mat-nav-list>
