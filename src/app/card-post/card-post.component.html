@@ -14,4 +14,13 @@
     Author: <a mat-button routerLink="/users/{{post.authorId}}">{{name}}</a>
   </mat-card-actions>
 
+  <div *ngIf="comments">
+    <h2>Comments:</h2>
+    <mat-list *ngFor="let comment of comments">
+
+      <mat-list-item>{{comment.msg}}</mat-list-item>
+    </mat-list>
+    <!-- <button (click)="onRemovePost(post.id)" mat-button color="primary">DELETE</button> -->
+  </div>
+
 </mat-card>
